@@ -1,0 +1,108 @@
+<div class="contact-hero">
+  <h1>Contact Eventify</h1>
+  <p>We’d love to hear from you! Let’s make your events unforgettable.</p>
+</div>
+
+<div id="contact-container" class="contact-container">
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Send Us a Message</h2>
+
+    <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate>
+
+      <!-- Name -->
+      <input type="text" name="name" placeholder="Name" [(ngModel)]="contact.name" required>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['name']?.invalid">
+      Name is required.
+    </div>
+
+      <!-- Email -->
+      <input type="email" name="email" placeholder="Email" [(ngModel)]="contact.email" required email>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['email']?.invalid">
+      Valid email is required.
+    </div>
+
+      <input type="text" name="phone" placeholder="Phone Number"
+       [(ngModel)]="contact.phone" required pattern="^[0-9]{10}$" #phone="ngModel">
+<div class="error" *ngIf="formSubmitted && phone.invalid">
+  Phone is required and must be 10 digits.
+</div>
+
+<!-- Subject -->
+<select name="subject" [(ngModel)]="contact.subject" required #subject="ngModel">
+  <option value="">Select Subject</option>
+  <option>General Inquiry</option>
+  <option>Event Booking</option>
+  <option>Partnership</option>
+  <option>Support</option>
+  <option>Feedback</option>
+</select>
+<div class="error" *ngIf="formSubmitted && subject.invalid">
+  Subject is required.
+</div>
+
+      <!-- Message -->
+      <textarea name="message" placeholder="Message" [(ngModel)]="contact.message" required></textarea>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['message']?.invalid">
+      Message is required.
+    </div>
+
+      <!-- Submit (always enabled) -->
+    <button type="submit">Send Message</button>
+  </form>
+
+</div>
+  <!-- Success Popup -->
+<div class="popup" *ngIf="showPopup">
+  <div class="popup-content">
+    <p>{{ successMessage }}</p>
+    <button (click)="closePopup()">OK</button>
+  </div>
+</div>
+
+
+
+
+  <!-- Contact Info -->
+<div class="contact-info">
+    <h2>Contact Information</h2>
+
+    <p><strong>📍 Address:</strong><br>
+      Mumbai, Maharashtra, India
+    </p>
+
+    <p><strong>📧 Email:</strong><br>
+      support@eventify.com
+    </p>
+
+    <p><strong>📞 Phone:</strong><br>
+      +91 12345 67890
+    </p>
+
+    <p><strong>🕒 Working Hours:</strong><br>
+      Monday – Saturday | 10:00 AM – 6:00 PM
+    </p>
+  </div>
+
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>How do I book an event?</h4>
+    <p>Browse events, select your ticket, and complete the payment.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Can I cancel my booking?</h4>
+    <p>Cancellation depends on the event organizer policy.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>How can I list my event?</h4>
+    <p>Select “Partnership” in the form and submit your details.</p>
+  </div>
+</div>

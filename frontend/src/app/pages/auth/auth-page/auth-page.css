@@ -1,0 +1,34 @@
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.auth-card {
+  width: 450px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  color: white;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid white;
+}

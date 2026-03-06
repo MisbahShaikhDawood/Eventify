@@ -1,0 +1,7 @@
+.login-warning {
+  background: #ffdddd;
+  color: red;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid red;
+}

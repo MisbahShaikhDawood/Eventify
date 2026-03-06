@@ -1,0 +1,67 @@
+<div class="payment-wrapper">
+
+  <!-- LEFT: Order Summary -->
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+
+    <div class="event-card">
+      <h3>{{ eventTitle }}</h3>
+      <p>Seats: {{ selectedSeats }}</p>
+      <p>Total Amount: ₹{{ totalPrice }}</p>
+    </div>
+
+    <div class="secure-box">
+      🔒 100% Secure Payments Powered by Razorpay
+    </div>
+  </div>
+
+  <!-- RIGHT: Payment Section -->
+  <div class="payment-section">
+
+    <h2>Select Payment Method</h2>
+
+    <div class="payment-tabs">
+      <button 
+        [class.active]="paymentMethod==='upi'" 
+        (click)="paymentMethod='upi'">UPI</button>
+
+      <button 
+        [class.active]="paymentMethod==='card'" 
+        (click)="paymentMethod='card'">Card</button>
+
+      <button 
+        [class.active]="paymentMethod==='netbanking'" 
+        (click)="paymentMethod='netbanking'">Net Banking</button>
+    </div>
+
+    <!-- UPI -->
+    <div *ngIf="paymentMethod==='upi'" class="payment-form">
+      <input type="text" placeholder="Enter UPI ID" [(ngModel)]="upiId">
+    </div>
+
+    <!-- Card -->
+    <div *ngIf="paymentMethod==='card'" class="payment-form">
+      <input type="text" placeholder="Card Number" [(ngModel)]="cardNumber">
+      <div class="row">
+        <input type="text" placeholder="MM/YY" [(ngModel)]="expiry">
+        <input type="password" placeholder="CVV" [(ngModel)]="cvv">
+      </div>
+    </div>
+
+    <!-- Net Banking -->
+    <div *ngIf="paymentMethod==='netbanking'" class="payment-form">
+      <select [(ngModel)]="bankName">
+        <option value="">Select Bank</option>
+        <option>SBI</option>
+        <option>HDFC</option>
+        <option>ICICI</option>
+      </select>
+    </div>
+
+    <button class="pay-btn" (click)="payWithRazorpay()">
+      Pay ₹{{ totalPrice }}
+    </button>
+
+  </div>
+
+</div>

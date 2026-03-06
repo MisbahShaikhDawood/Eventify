@@ -1,0 +1,98 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.profile-card {
+  width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-bottom: 15px;
+}
+
+.info label {
+  font-size: 13px;
+  color: gray;
+}
+
+.info p {
+  font-weight: 500;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.otp-btn,
+.change-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2e38aa;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.otp-btn:hover,
+.change-btn:hover {
+  opacity: 0.85;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #ff391a;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  opacity: 0.85;
+}
+
+.message {
+  font-size: 13px;
+  color: green;
+  text-align: center;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #eca100;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover{
+    background-color: green;
+}

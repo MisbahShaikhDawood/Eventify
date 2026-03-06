@@ -1,0 +1,237 @@
+<div>
+    <div class="home-section1">
+        <img class="homeimage1" src="images/14.jpg">
+        <img class="homeimage2" src="images/10.png">
+        <h1>Discover & Booking Amazing Events</h1>
+        <h3>Find the Best Events, Concert, Exhibition, and More!</h3>
+        <form class="home-section1-search-form" (ngSubmit)="searchEvents()">
+
+  <!-- Search Event -->
+  <div class="home-section1-search-box">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search events..." [(ngModel)]="searchQuery" name="searchQuery" />
+  </div>
+
+  <!-- Category -->
+  <select [(ngModel)]="searchCategory" name="searchCategory">
+      <option value="">All Categories</option>
+      <option value="Music">Music</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Party">Party</option>
+      <option value="Culture Festival">Culture Festival</option>
+      <option value="Exhibition">Exhibition</option>
+      <option value="Workshop">Workshop</option>
+      <option value="Corporate">Corporate</option>
+  </select>
+
+  <!-- City -->
+  <select [(ngModel)]="searchCity" name="searchCity">
+      <option value="">Select City</option>
+      <option value="Mumbai">Mumbai</option>
+  </select>
+
+  <!-- Button -->
+  <button type="submit">Search</button>
+
+</form>
+    </div>
+
+    <!-- Popular Event Section -->
+    <div id="home-section2" class="home-section2">
+        <h2>Upcoming Events</h2>
+        <div class="home-events-container">
+            <div class="home-event-card1">
+                <img src="images/arijit1.jpg">
+                <div class="home-event-content1">
+                    <h3>Arijit Singh Live Concert</h3>
+                    <p class="home-event-date1"> <i class="fa-solid fa-calendar-days"></i>    25 March 2026</p>
+                    <a class="event-btn" [routerLink]="['/event', 1]">Book Now</a>
+                </div>
+            </div>
+            <div class="home-event-card1">
+                <img src="images/munnawar1.jpg">
+                <div class="home-event-content1">
+                    <h3>Comedy - Munnawar Farouqi</h3>
+                    <p class="home-event-date1"> <i class="fa-solid fa-calendar-days"></i>    20 March 2026</p>
+                    <a class="event-btn" [routerLink]="['/event', 2]">Book Now</a>    
+                </div>
+            </div>
+            <div class="home-event-card1">
+                <img src="images/holievent.jpg">
+                <div class="home-event-content1">
+                    <h3>Holi Party</h3>
+                    <p class="home-event-date1"> <i class="fa-solid fa-calendar-days"></i>    03 March 2026</p>
+                    <a class="event-btn" [routerLink]="['/event', 3]">Book Now</a>
+                </div>
+            </div>
+            <div class="home-event-card1">
+                <img src="images/exhibitionharrypotter.jpg">
+                <div class="home-event-content1">
+                    <h3>Harry Potter - Exhibition</h3>
+                    <p class="home-event-date1"> <i class="fa-solid fa-calendar-days"></i>    15 March 2026</p>
+                    <a class="event-btn" [routerLink]="['/event', 4]">Book Now</a>
+                </div>
+            </div>
+            
+        </div>
+        <a href="#home-section5"><button class="home-event-view-more-btn">View More Events</button></a>
+    </div>
+    
+    <!-- Popular Event Section End -->
+
+    <div class="home-section3">
+        <h2>Why Choose Eventify?</h2>
+        <div class="top-features">
+            <div class="feature-box">
+                <div class="icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>Upcoming Events</h3>
+                    <p>Explore hundreds of events happening near you</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <div class="text">
+                    <h3>Easy Booking</h3>
+                    <p>Book your tickets in just a few clicks</p>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="text">
+                    <h3>Secure Payments</h3>
+                    <p>Safe and secure online payments</p>
+                </div>
+            </div>
+        </div>
+        <!-- Image Slider -->
+        <div class="slider" (mousemove)="changeDirection($event)">
+            <div class="slides">
+                <img *ngFor="let img of images" [src]="img" (click)="open(img)">
+                <img *ngFor="let img of images" [src]="img" (click)="open(img)">
+            </div>
+        </div>
+
+        <div class="popup" *ngIf="selectedImage">
+            <span class="close" (click)="close()">❌</span>
+            <img [src]="selectedImage">
+        </div>
+    </div>
+
+    <!-- Section 3 End -->
+
+      <!-- Section 4-->
+    <div class="home-section4">
+        <section class="stats-section">
+            <div class="stats-container">
+
+                <div class="stat">
+                <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2>12+</h2>
+                <p>Years of Experience</p>
+                </div>
+
+                <div class="stat">
+                <div class="icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>30+</h2>
+                <p>Awards Won</p>
+                </div>
+
+                <div class="stat">
+                <div class="icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+                <h2>70L+</h2>
+                <p>Tickets Sold</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--section 4 end -->
+
+    <!-- Section 5-->
+    <div id="home-section5" class="home-section5">
+        <img src="images/star.png" alt="">
+        <!-- Event Category Section -->
+            <div class="event-category-section">
+                <h2>Explore Event Categories</h2>
+                <div class="event-category-container">
+                    <div class="event-category-card" *ngFor="let category of eventCategories">
+                        <img [src]="category.image" alt="{{ category.name }}">
+                        <div class="category-overlay">
+                            <h3>{{ category.name }}</h3>
+                            <button (click)="viewMore(category)">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Section 5 end -->
+
+    <!--section 6 -->
+    <div class="contact-section6">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline disablepictureinpicture class="bg-video">
+    <source src="videos/home-video1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Contact Form -->
+  
+    <div class="contact-form-container">
+  <h2>Contact Us</h2>
+
+  <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate>
+
+    <!-- Name -->
+    <input type="text" name="name" placeholder="Name" [(ngModel)]="contact.name" required>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['name']?.invalid">
+      Name is required.
+    </div>
+
+    <!-- Email -->
+    <input type="email" name="email" placeholder="Email" [(ngModel)]="contact.email" required email>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['email']?.invalid">
+      Valid email is required.
+    </div>
+
+    <!-- Message -->
+    <textarea name="message" placeholder="Message" [(ngModel)]="contact.message" required></textarea>
+    <div class="error" *ngIf="formSubmitted && contactForm.controls['message']?.invalid">
+      Message is required.
+    </div>
+
+    <!-- Submit (always enabled) -->
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Success message -->
+  <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+</div>
+
+</div>
+
+
+
+
+
+    <!--section 6 end -->
+
+
+</div>
+
+
+

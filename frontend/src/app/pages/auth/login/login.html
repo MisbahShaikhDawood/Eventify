@@ -1,0 +1,36 @@
+<div class="login-container">
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <h2>Login</h2>
+
+    <input type="email"
+           name="email"
+           [(ngModel)]="email"
+           required
+           email
+           placeholder="Enter Email">
+
+    <div class="password-field">
+      <input [type]="showPassword ? 'text' : 'password'"
+             name="password"
+             [(ngModel)]="password"
+             required
+             minlength="6"
+             placeholder="Enter Password">
+      <span (click)="showPassword = !showPassword">
+        {{ showPassword ? 'Hide' : 'Show' }}
+      </span>
+    </div>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <div class="forgot">
+      <a (click)="goToForgotPassword()" style="color: blue;">Forgot Password?</a>
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+
+    <p>
+      Don't have an account? <a routerLink="/register"  style="color: blue; cursor: pointer;">Register</a>
+    </p>
+  </form>
+</div>

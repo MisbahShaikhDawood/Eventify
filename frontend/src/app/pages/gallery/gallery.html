@@ -1,0 +1,36 @@
+<section class="gallery-wrapper">
+
+  <h1 class="gallery-title">Event Gallery</h1>
+  <p>Moments that make memories unforgettable</p>
+
+  <swiper-container
+    effect="coverflow"
+    grab-cursor="true"
+    centered-slides="true"
+    slides-per-view="auto"
+    loop="true"
+    autoplay-delay="2500"
+    navigation="true"
+    pagination="true"
+    coverflow-effect-rotate="30"
+    coverflow-effect-depth="200"
+    coverflow-effect-modifier="1"
+    class="mySwiper"
+  >
+
+    <swiper-slide *ngFor="let img of images">
+      <img [src]="img"
+           (click)="openImage(img)">
+    </swiper-slide>
+    
+
+  </swiper-container>
+
+</section>
+
+
+<!-- FULL SCREEN MODAL -->
+<div *ngIf="selectedImage" class="modal">
+  <span class="close-btn" (click)="closeImage()">✖</span>
+  <img [src]="selectedImage" class="modal-img">
+</div>

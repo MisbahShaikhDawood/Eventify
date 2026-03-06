@@ -1,0 +1,73 @@
+<div>
+  <!-- Popup -->
+  <div *ngIf="auth.getMessage()" class="popup">
+    <span>{{ auth.getMessage() }}</span>
+    <span class="close-btn" (click)="closePopup()">❌</span>
+  </div>
+  <nav class="home-nav" style="display: flex;" >
+    <div class="nav-content">
+        <li><a routerLink="/"><img class ="home-eventify-logo-1" src="images/13.png" ></a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/gallery">Gallery</a></li>
+        <li class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+          <a routerLink="/events">Events</a>
+          <ul class="dropdown-menu" *ngIf="showDropdown">
+            <li><a routerLink="/events/music">Music</a></li>
+            <li><a routerLink="/events/comedy">Comedy</a></li>
+            <li><a routerLink="/events/party">Party</a></li>
+            <li><a routerLink="/events/exhibition">Exhibition</a></li>
+            <li><a routerLink="/events/workshop">Workshop</a></li>
+            <li><a routerLink="/events/cultural">Cultural Festival</a></li>
+            <li><a routerLink="/events/corporate">Corporate</a></li>
+          </ul>
+        
+        <li><a routerLink="/offers">Offers</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+        <li *ngIf="auth.isAuthenticated()"> <a routerLink="/my-tickets">My E-Tickets</a></li>
+      
+    </div>
+    <div class="nav-content-right">
+      <a>
+      <button routerLink="/contact" (click)="closeMenu()">Want to Organize?</button>
+      </a>
+   
+      <div class="user-menu">
+
+            <!-- User Icon -->
+            <div class="user-icon" (click)="toggleMenu()">
+              <i class="fas fa-user-circle"></i>
+
+              <!-- Show only when logged in -->
+              
+              <span class="welcome-text" *ngIf="auth.isAuthenticated()">
+                Hi, {{ auth.getUsername() }}
+              </span>
+              
+            </div>
+
+            <!-- Dropdown -->
+          <div class="dropdown" *ngIf="showMenu">
+              <!-- If NOT logged in -->
+              <ng-container *ngIf="!auth.isAuthenticated()">
+                <a routerLink="/login" (click)="closeMenu()">Login</a>
+                <a routerLink="/register" (click)="closeMenu()">Register</a>
+              </ng-container>
+
+              <!-- If logged in -->
+              <ng-container *ngIf="auth.isAuthenticated()">
+                <a routerLink="/profile" (click)="closeMenu()">My Profile</a>
+              </ng-container>
+          </div>
+
+      </div>
+     
+      
+    </div>
+    
+  </nav>
+</div>
+
+
+
+

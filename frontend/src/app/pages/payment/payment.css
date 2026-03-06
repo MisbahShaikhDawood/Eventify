@@ -1,0 +1,97 @@
+.payment-wrapper {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.order-summary {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.event-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.secure-box {
+  margin-top: 20px;
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+.payment-section {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.payment-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payment-tabs button.active {
+  background: #ff3d00;
+  color: white;
+}
+
+.payment-form input,
+.payment-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 14px;
+  background: #ff3d00;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-wrapper {
+    flex-direction: column;
+  }
+}

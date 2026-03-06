@@ -1,0 +1,30 @@
+# Query: /login
+# ContextLines: 1
+
+8 results - 5 files
+
+frontend\src\app\app.routes.ts:
+  12  
+  13: import { Login } from './pages/auth/login/login';
+  14  import { Register } from './pages/auth/register/register';
+
+frontend\src\app\pages\auth\auth-page\auth-page.ts:
+  2  import { CommonModule } from '@angular/common';
+  3: import { Login } from '../login/login';
+  4  import { Register } from '../register/register';
+
+frontend\src\app\pages\auth\login\login.spec.ts:
+  2  
+  3: import { Login } from './login';
+  4  
+
+frontend\src\app\pages\auth\login\login.ts:
+   9    imports: [CommonModule, FormsModule],
+  10:   templateUrl: './login.html',
+  11:   styleUrls: ['./login.css']
+  12  })
+
+frontend\src\app\pages\events\music\music.ts:
+  52          this.auth.redirectUrl = this.router.url;
+  53:         this.router.navigate(['/auth']);
+  54  

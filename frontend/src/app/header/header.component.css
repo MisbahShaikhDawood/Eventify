@@ -1,0 +1,233 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+.home-nav{
+   background-color: rgb(5, 5, 5);
+  position: relative;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 90px;
+}
+.home-eventify-logo-1{
+    width: 70px;
+    height: 80px;
+    margin-left: 5%;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.home-eventify-logo-1:hover{
+  transform: scale(1.1);
+}
+
+
+
+.nav-content{
+    font-size: 18px;
+    color: rgb(160, 160, 160);
+    display: flex; 
+    gap: 30px; 
+    align-items: center;
+    padding-left: 3%;
+}
+
+.nav-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-left: 3%;
+}
+
+.nav-content > li {
+  list-style: none;
+  position: relative;   /* IMPORTANT */
+}
+
+.nav-content a:hover{
+    color: rgb(255, 90, 241);
+
+}
+
+.nav-content-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-content-right button{
+    background-color: rgb(255, 57, 26);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-content-right button:hover{
+    background-color: rgb(46, 56, 170);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #dbde35;
+}
+
+#shopping-cart-icon{
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    cursor: pointer;
+}
+
+#shopping-cart-icon:hover{
+    color: rgb(255, 90, 241);
+}
+
+#user-icon{
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    cursor: pointer;
+}
+
+#user-icon:hover{
+    color: rgb(255, 90, 241);
+}
+
+.user-icon i {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.user-icon i:hover {
+  color: rgb(255, 90, 241);
+}
+
+
+
+.password-field {
+  position: relative;
+}
+
+.password-field .toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #667eea;
+}
+
+.forgot {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.forgot a {
+  font-size: 13px;
+  color: #667eea;
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+.user-menu .dropdown {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background: white;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 2000;
+
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+
+.user-menu .dropdown a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.user-menu .dropdown a:hover {
+  background: rgb(255, 90, 241);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fafafa;
+}
+
+.user-icon {
+  display: flex;
+  gap: 20px;
+}

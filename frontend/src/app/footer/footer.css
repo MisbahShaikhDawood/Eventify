@@ -1,0 +1,236 @@
+.footer{
+  background: linear-gradient(135deg, #0d193e, #0b2572, #0d193e);
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+  
+}
+
+.site-footer {
+  background: linear-gradient(135deg, #0d193e, #0b2572, #0d193e);
+  color: white;
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 60px;
+  
+}
+
+
+
+.logo{
+  display: flex;
+  margin-left: 8%;
+  justify-content: center;
+}
+
+
+.logo img{
+  height: 110px;
+  width: 70px;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.logo h2{
+  font-size: 30px;
+  margin-top: 20%;
+  margin-left: 10px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 180px;
+  background-color: #0fa7ffb0;
+  margin-top: 60px;
+}
+
+.horizontal-line{
+  width: 90%;
+  height: 2px;
+  background-color: #0fa7ffb0;
+  margin-top: 5px;
+  margin-left: 5%;
+  
+}
+
+.footerpart1{
+  margin-left: 0;
+  margin-left: 30px;
+}
+
+.footerpart1 .text {
+  font-size: 18px;
+  margin-top: 10px;
+  padding-left: 70px;
+}
+
+.social-icons{
+  display: flex;
+  margin-left: 11%;
+  margin-top: 10px;
+  justify-content: center;
+  
+}
+
+.fab {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  
+}
+
+.fa-brands{
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa-brands:hover {
+  opacity: 0.7;
+}
+
+.fab:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  
+}
+
+/* Instagram */
+.fa-instagram {
+  background: linear-gradient(45deg, #f09433, #e56aa6, #40c9ff);
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: orange;
+}
+
+form{
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe{
+  display: flex;
+  padding-left: 6%;
+  
+}
+
+.subscribe form input{
+  padding: 8px;
+  color: #000000;
+  background-color: #fff;
+}
+
+.subscribe button {
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 119, 0);
+  color: #fff;
+  border: none;
+}
+
+.subscribe button:hover {
+  background-color: rgb(255, 215, 39);
+  color:#000000;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  color: rgb(246, 255, 0);
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+.footerpart2{
+position: relative;
+margin-top: 1.5%;
+}
+
+
+.footerpart2 h3{
+ font-size: 25px;
+ margin-top: 20px;  
+}
+
+.footerpart2 .footer-links{
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footerpart3{
+  margin-top: 25px;
+}
+.footerpart3 h3{
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.contact-info{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.contact-info p{
+  margin-bottom: 10px;
+}
+
+.map{
+  margin-top: 48px;
+  border-radius: 10px;
+  height: 200px;
+  width: 300px;
+  position: absolute;
+}

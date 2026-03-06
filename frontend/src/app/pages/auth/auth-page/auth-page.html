@@ -1,0 +1,17 @@
+<div>
+  <ng-container *ngIf="mode === 'login'">
+    <app-login></app-login>
+  </ng-container>
+
+  <ng-container *ngIf="mode === 'register'">
+    <app-register></app-register>
+  </ng-container>
+
+  <ng-container *ngIf="mode === 'forgot'">
+    <app-forgot-password></app-forgot-password>
+  </ng-container>
+
+  <ng-container *ngIf="mode === 'reset'">
+    <app-reset-password></app-reset-password>
+  </ng-container>
+</div>

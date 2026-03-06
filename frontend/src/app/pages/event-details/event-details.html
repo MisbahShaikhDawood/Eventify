@@ -1,0 +1,27 @@
+<div *ngIf="selectedEvent" class="event-details-container">
+   
+  <h2>{{ selectedEvent.title }}</h2>
+  <img 
+    [src]="selectedEvent.image" 
+    [alt]="selectedEvent.title" 
+    class="event-image"
+  />
+  <p>Date: {{ selectedEvent.date }}</p>
+  <p>Time: {{ selectedEvent.time }}</p>
+  <p>Location: {{ selectedEvent.location }}</p>
+  <p>Price per Seat: ₹{{ selectedEvent.price }}</p>
+
+  <label>Select Seats:</label>
+  <div class="seat-selector">
+    <button type="button" (click)="decreaseSeat()">-</button>
+    <input type="number" [value]="selectedSeats" readonly />
+    <button type="button" (click)="increaseSeat()">+</button>
+  </div>
+
+  <p><strong>Total Price:</strong> ₹{{ totalPrice }}</p>
+
+  <button (click)="proceedToPayment()">Proceed to Payment</button>
+
+</div>
+
+

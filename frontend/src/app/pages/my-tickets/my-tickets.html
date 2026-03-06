@@ -1,0 +1,11 @@
+<h2>My E-Tickets</h2>
+
+<div *ngIf="tickets.length === 0">
+  <p>You have no tickets yet.</p>
+</div>
+
+<div *ngFor="let ticket of tickets" class="ticket-card">
+  <h3>{{ ticket.title }}</h3>
+  <p>Seats: {{ ticket.seats }}</p>
+  <p>Total Paid: ₹{{ ticket.totalPrice }}</p>
+</div>

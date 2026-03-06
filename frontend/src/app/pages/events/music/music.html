@@ -1,0 +1,10 @@
+<div *ngFor="let event of filteredEvents" class="event-card">
+  <img [src]="event.image" alt="{{ event.name }}">
+  <h3>{{ event.name }}</h3>
+  <p>{{ event.date }}</p>
+  <p>{{ event.city }}</p>
+
+  <button (click)="bookEvent(event)">
+    Book Now
+  </button>
+</div>

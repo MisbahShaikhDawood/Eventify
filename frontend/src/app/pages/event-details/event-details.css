@@ -1,0 +1,101 @@
+/* Event Details Container */
+
+
+div {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #f9f9f9; /* light background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Event Title */
+div h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+  text-align: center;
+}
+
+/* Event Info */
+div p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #555;
+}
+
+/* Label for seats */
+div label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input Field */
+div input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #3d3a3a;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.3s border-color;
+}
+
+div input:focus {
+  border-color: #ffcc00; /* highlight on focus */
+}
+
+/* Button */
+div button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #720fb0; /* bright accent color */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s background-color, 0.3s transform;
+}
+
+div button:hover {
+  background-color: #16ac10;
+  transform: translateY(-2px);
+}
+
+.seat-selector{
+    display: flex;
+    align-items:baseline;
+    gap:20px;
+}
+
+
+.event-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.event-details-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.event-details-container{
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+

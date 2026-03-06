@@ -1,0 +1,65 @@
+<div class="footer">
+ <div class="site-footer ">
+    <div class="footerpart1">
+      <div class="logo">
+        <img src="images/13.png" >
+        <h2>Eventify</h2>
+      </div>
+      <div class="text">
+        <p>Your Event, Your Way.</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  
+      </div>
+      <div class="subscribe">
+          <form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm" novalidate>
+            <input type="email" name="email" placeholder="Enter Your Email" [(ngModel)]="contact.email"  required email>
+              <div class="error" *ngIf="formSubmitted && contactForm.controls['email']?.invalid">
+                Valid email is required.
+              </div>
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="footerpart2">
+      <h3>Quick Links</h3>
+      <div class="footer-links">
+        <a href="./">Home</a><br>
+        <a href="./about">About</a><br>
+        <a href="./gallery">Gallery</a><br>
+        <a href="./events">Events</a><br>
+        <a href="./offers">Offers</a><br>
+        <a href="./contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="footerpart3">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <p><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Company: Mumbai, Maharashtra, India</p>
+        <p><i class="fa-solid fa-phone"></i> +91 (123) 456-7890</p>
+        <p><i class="fa-solid fa-envelope"></i> info@eventify.com</p>
+      </div>
+    </div>
+
+    <div class="vertical-line"></div> 
+
+    <div>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.510148610361!2d72.85854987497638!3d19.041295182156173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8d2f810fba5%3A0x3eb25d8eb5ed4d3b!2sSIES%20College%20Of%20Arts%2C%20Science%20%26%20Commerce%20(Autonomous)!5e0!3m2!1sen!2sin!4v1771490978176!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+  </div>
+  <div class="horizontal-line"></div>
+   <!-- <p class="copyright">© 2026 Eventify. All rights reserved.</p> -->
+    <div class="copyright" style=" margin: 0; padding-top: 10px; padding-bottom: 0px; text-align: center;">
+      <p>© 2026 Eventify. All rights reserved.</p>
+    </div>
+</div>

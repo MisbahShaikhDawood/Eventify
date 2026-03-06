@@ -1,0 +1,61 @@
+<div class="profile-container">
+
+  <div class="profile-card">
+
+    <h2>My Profile</h2>
+
+    <div class="info">
+      <label>Name</label>
+      <p>{{ user?.name }}</p>
+    </div>
+
+    <div class="info">
+      <label>Email</label>
+      <p>{{ email }}</p>
+    </div>
+
+    <hr>
+
+    <h3>Change Password via OTP</h3>
+
+        <!-- Send OTP -->
+        <button class="otp-btn"
+                (click)="sendOtp()"
+                *ngIf="!otpSent">
+        Send OTP
+        </button>
+
+        <!-- Enter OTP -->
+        <div *ngIf="otpSent && !otpVerified">
+
+            <input type="text"
+                    placeholder="Enter OTP"
+                    [(ngModel)]="enteredOtp">
+
+            <button class="change-btn"
+                    (click)="verifyOtp()">
+                Verify OTP
+            </button>
+
+        </div>
+
+        <!-- After OTP Verified -->
+        <div *ngIf="otpVerified">
+
+            <input type="password"
+                    placeholder="Enter New Password"
+                    [(ngModel)]="newPassword">
+
+            <button class="change-btn"
+                    (click)="changePassword()">
+                Change Password
+            </button>
+
+        </div>
+
+        <p class="message">{{ message }}</p>
+        <button (click)="logout()">Logout</button>
+  </div>
+  
+
+</div>
